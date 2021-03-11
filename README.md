@@ -24,3 +24,13 @@ It would be better to create a new environment in Anaconda.
 * pip install --upgrade pip
 
 * pip install --upgrade ddsp
+
+### Overview
+
+* [utils.py](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/utils.py): Some useful functions such as plotting spectrogram, adding noise etc.
+ 
+ * [train_autoencoder.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/train_autoencoder.ipynb): Training a DDSP model in Google Colab.
+ 
+ * [showing_models_colab](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/showing_models_colab.ipynb): Loading a trained DDSP model in Google Colab
+
+* [showing_models_local](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/showing_models_local.ipynb): Loading a trained DDSP model in local environment.
