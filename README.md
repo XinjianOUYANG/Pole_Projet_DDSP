@@ -15,7 +15,7 @@
 * Loading the model trained with z-encoder.
 
 
-### Inatallation
+### Installation
 
 Requires python = 3.8 and tensorflow version >= 2.1.0, but the core library runs in either eager or graph mode.
 
