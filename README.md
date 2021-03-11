@@ -7,7 +7,6 @@
 * [Official DDSP library](https://github.com/magenta/ddsp)
 
 ### The main problems we have:
-* Audio dataset(10-20 minutes long per audio)
 * Computational power.
 * Loading the model trained with z-encoder.
 
