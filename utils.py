@@ -1,21 +1,33 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 import numpy as np
 import matplotlib.pyplot as plt
 import ddsp
 
 import base64
 import io
-import pickle
-
+import os
 import ddsp
 import ddsp.training
-from IPython import display
-import note_seq
+import gin
+import pickle
 import numpy as np
 from scipy import stats
 from scipy.io import wavfile
-import tensorflow.compat.v2 as tf
 
-DEFAULT_SAMPLE_RATE = ddsp.spectral_ops.CREPE_SAMPLE_RATE
+import matplotlib
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy as sp
+import librosa
+import librosa.display
+import tensorflow.compat.v2 as tf
+import tensorflow_datasets as tfds  
+
+
+sample_rate = 16000
+EFAULT_SAMPLE_RATE = ddsp.spectral_ops.CREPE_SAMPLE_RATE
 
 _play_count = 0  # Used for ephemeral play().
 
@@ -50,6 +62,81 @@ def specplot(audio,
     plt.yticks([])
     plt.xlabel('Time')
     plt.ylabel('Frequency')
+
+def model_loading(audio, audio_features, model_dir, training = False):
+    # dataset_statistics.pkl in .model folder
+    dataset_stats_file = os.path.join(model_dir, 'dataset_statistics.pkl')
+
+    # operative_config-0.gin in model folder
+    gin_file = os.path.join(model_dir, 'operative_config-0.gin')
+
+    # Load the dataset statistics.
+    print(f'Loading dataset statistics from {dataset_stats_file}')
+    try:
+        if tf.io.gfile.exists(dataset_stats_file):
+            with tf.io.gfile.GFile(dataset_stats_file, 'rb') as f:
+                DATASET_STATS = pickle.load(f)
+    except Exception as err:
+        print('Loading dataset statistics from pickle failed: {}.'.format(err))
+
+
+    # Parse gin config,
+    with gin.unlock_config():
+        gin.parse_config_file(gin_file, skip_unknown=True)
+
+    # Assumes only one checkpoint in the folder, 'ckpt-[iter]`.
+    ckpt_files = [f for f in tf.io.gfile.listdir(model_dir) if 'ckpt' in f]
+    ckpt_name = ckpt_files[0].split('.')[0]
+    ckpt = os.path.join(model_dir, ckpt_name)
+
+    # Ensure dimensions and sampling rates are equal
+    time_steps_train = gin.query_parameter('F0LoudnessPreprocessor.time_steps')
+    n_samples_train = gin.query_parameter('Harmonic.n_samples')
+    hop_size = int(n_samples_train / time_steps_train)
+
+    time_steps = int(audio.shape[0] / hop_size)
+    n_samples = time_steps * hop_size
+
+    # print("===Trained model===")
+    # print("Time Steps", time_steps_train)
+    # print("Samples", n_samples_train)
+    # print("Hop Size", hop_size)
+    # print("\n===Resynthesis===")
+    # print("Time Steps", time_steps)
+    # print("Samples", n_samples)
+    # print('')
+
+    gin_params = [
+        'Harmonic.n_samples = {}'.format(n_samples),
+        'FilteredNoise.n_samples = {}'.format(n_samples),
+        'F0LoudnessPreprocessor.time_steps = {}'.format(time_steps),
+        'oscillator_bank.use_angular_cumsum = True',  # Avoids cumsum accumulation errors.
+    ]
+
+    with gin.unlock_config():
+        gin.parse_config(gin_params)
+
+
+    # Trim all input vectors to correct lengths 
+    for key in ['f0_hz', 'f0_confidence', 'loudness_db']:
+        audio_features[key] = audio_features[key][:time_steps]
+    audio_features['audio'] = audio_features['audio'][:n_samples]
+
+    # Set up the model just to predict audio given new conditioning
+    model = ddsp.training.models.Autoencoder()
+    model.restore(ckpt)
+
+    # Resynthesize audio.
+    outputs = model(audio_features, training) # Run the forward pass, add losses, and create a dictionary of outputs.
+    # print(outputs.keys())
+    # dict_keys(['inputs', 'audio', 'f0_hz', 'f0_confidence', 'loundness_db', 
+    #           'f0_condience', 'loudness_db', 'f0_scaled', 'ld_scaled', 'amps', 
+    #           'harmonic_distribution', 'noise_magnitudes', 'harmonic', 'filtered_noise', 
+    #           'add', 'reverb', 'out', 'audio_synth'])
+
+    return outputs
+
+
 
 # def play(array_of_floats,
 #          sample_rate=DEFAULT_SAMPLE_RATE,
