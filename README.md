@@ -1,6 +1,6 @@
 # Pole_Projet_DDSP(This is an ongoing project)
  
-### Introduction
+### Introduction of DDSP and our project
 
 * Reprinted article: [DDSP paper and codes summary](https://www.cmwonderland.com/blog/2020/03/01/ddsp_sum/)
 
@@ -9,6 +9,8 @@
 * [Official DDSP library](https://github.com/magenta/ddsp)
 
 * [An unofficial one](https://github.com/Manza12/DDSP) but valuable
+
+* Description of our project [Projet 2A - Simon Leglaive.pdf](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/76cc7467678985e2750b62647fb39c616d7223e7/PDF_documents/Projet%202A%20-%20Simon%20Leglaive.pdf)
 
 ### The main problems we have:
 * Computational power.
