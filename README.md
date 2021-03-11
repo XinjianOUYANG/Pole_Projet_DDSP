@@ -19,6 +19,8 @@
 
 Requires python = 3.8 and tensorflow version >= 2.1.0, but the core library runs in either eager or graph mode.
 
+It would be better to create a new environment in Anaconda.
+
 * pip install --upgrade pip
 
 * pip install --upgrade ddsp
