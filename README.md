@@ -34,3 +34,5 @@ It would be better to create a new environment in Anaconda.
  * [showing_models_colab](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/showing_models_colab.ipynb): Loading a trained DDSP model in Google Colab.(It may take  much time since we have to upload the model and audio files)
 
 * [showing_models_local](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/showing_models_local.ipynb): Loading a trained DDSP model in local environment.(Recommended, and we have to set the paths of model file and audio file manually)
+
+* [timbre_transform.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/c3b213e64ba9fbbdf3cf16d0467e2896124bbdb7/timbre_transfer.ipynb): Using pretrained DDSP models to transform the timbre of an audio
