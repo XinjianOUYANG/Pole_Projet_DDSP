@@ -6,7 +6,7 @@
 
 * [Official DDSP library](https://github.com/magenta/ddsp)
 
-* [An unofficial one](https://github.com/Manza12/DDSP) but referable
+* [An unofficial one](https://github.com/Manza12/DDSP) but valuable
 
 ### The main problems we have:
 * Computational power.
