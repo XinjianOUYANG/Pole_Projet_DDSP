@@ -1,8 +1,10 @@
 # Pole_Projet_DDSP(This is an ongoing project)
  
-* [The summary of DDSP paper and its library](https://www.cmwonderland.com/blog/2020/03/01/ddsp_sum/) which is written by others
+### Introduction
 
-* [github DDSP library](https://github.com/magenta/ddsp)
+* reprinted article: [The summary of DDSP paper and its library](https://www.cmwonderland.com/blog/2020/03/01/ddsp_sum/)
+
+* [official DDSP library](https://github.com/magenta/ddsp)
 
 ### The main problems we have:
 * Audio dataset(10-20 minutes long per audio)
