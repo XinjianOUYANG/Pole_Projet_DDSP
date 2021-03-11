@@ -6,6 +6,8 @@
 
 * [Official DDSP library](https://github.com/magenta/ddsp)
 
+* [An unofficial one](https://github.com/Manza12/DDSP) but referable
+
 ### The main problems we have:
 * Computational power.
 * Loading the model trained with z-encoder.
