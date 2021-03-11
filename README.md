@@ -2,7 +2,7 @@
  
 ### Introduction
 
-* Reprinted article: [The summary of DDSP paper and its library](https://www.cmwonderland.com/blog/2020/03/01/ddsp_sum/)
+* Reprinted article: [DDSP paper and codes summary](https://www.cmwonderland.com/blog/2020/03/01/ddsp_sum/)
 
 * [Presentation of DDSP](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/620ced17411f5a450748d51fc227040f787b98c1/T1/DDSP_T1.pdf)
 
