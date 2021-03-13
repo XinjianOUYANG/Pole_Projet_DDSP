@@ -14,7 +14,7 @@
 
 ### The main problems we have:
 * Computational power.
-* Loading the model trained with z-encoder.
+
 
 
 ### Installation
