@@ -27,6 +27,8 @@ It would be better to create a new environment in Anaconda.
 
 * pip install --upgrade ddsp
 
+* pip install google.colab 
+
 ### Overview
 
 * [utils.py](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/utils.py): Some useful functions such as plotting spectrogram, adding noise etc.
