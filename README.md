@@ -8,10 +8,6 @@
 * [An unofficial one](https://github.com/Manza12/DDSP) but valuable
 * Description of our project [Projet 2A - Simon Leglaive.pdf](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/76cc7467678985e2750b62647fb39c616d7223e7/PDF_documents/Projet%202A%20-%20Simon%20Leglaive.pdf)
 
-### The main problems we have:
-
-* Computational power.
-
 ### Installation
 
 Requires python = 3.8 and tensorflow version >= 2.1.0, but the core library runs in either eager or graph mode.
