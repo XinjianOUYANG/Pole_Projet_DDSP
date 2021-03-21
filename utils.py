@@ -13,12 +13,11 @@ import ddsp
 import ddsp.training
 import gin
 import pickle
-import numpy as np
 from scipy import stats
 from scipy.io import wavfile
 
-import matplotlib
-import numpy as np
+#import matplotlib
+
 import matplotlib.pyplot as plt
 import scipy as sp
 import librosa
