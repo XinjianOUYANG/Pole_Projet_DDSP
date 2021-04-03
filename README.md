@@ -8,7 +8,7 @@
 * [An unofficial DDSP library](https://github.com/Manza12/DDSP) but valuable
 * Description of our project [Projet 2A - Simon Leglaive.pdf](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/76cc7467678985e2750b62647fb39c616d7223e7/PDF_documents/Projet%202A%20-%20Simon%20Leglaive.pdf)
 
-* Gaussian Mixture Mode [sklearn GMM](https://scikit-learn.org/stable/modules/mixture.html#gmm)
+* Gaussian Mixture Model [sklearn GMM](https://scikit-learn.org/stable/modules/mixture.html#gmm)
 
 ### Installation
 
