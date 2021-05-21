@@ -1,4 +1,4 @@
-# Pole_Projet_DDSP(This is an ongoing project)
+# Pole_Projet_DDSP
 
 ### Introduction of DDSP and our project
 
