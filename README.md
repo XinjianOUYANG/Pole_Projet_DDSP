@@ -32,4 +32,5 @@ Required packages:
 * [showing_models_colab.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/showing_models_colab.ipynb)(from library tutorials): Loading a trained DDSP model in Google Colab.(It may take  much time since we have to upload the model and audio files)
 * [showing_models_local.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/7568f3114fca4b9c59558036f09a01a27b756d39/showing_models_local.ipynb): Loading a trained DDSP model in local environment.(Recommended, and we have to set the paths of model file and audio file manually)
 * [timbre_transform_colab.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/c3b213e64ba9fbbdf3cf16d0467e2896124bbdb7/timbre_transfer.ipynb)(from library tutorials): Using pretrained DDSP models to transform the timbre of an audio in Google Colab
-* []
+* [T3_z_generator.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/main/T3_z_generator.ipynb): Extracting z datasets from audios using the pretrained model.
+* [T3_synthesizer.ipynb](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/blob/main/T3_synthesizer.ipynb): A generative DDSP model using the GMM and predefined pitch and loudness profiles and synthesing an audio sound.
