@@ -21,7 +21,7 @@ It is recommended  to create a new environment in Anaconda.
 
 Required packages:
 
-    numpy, math, base64, io. os, ddsp, gin, pickle, matplotlib, scipy, librosa...
+    numpy, math, base64, io. os, ddsp, gin, pickle, matplotlib, scipy, librosa, soundfile...
     
 ### Overview
 
