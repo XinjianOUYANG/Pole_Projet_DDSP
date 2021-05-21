@@ -16,8 +16,6 @@ import pickle
 from scipy import stats
 from scipy.io import wavfile
 
-#import matplotlib
-
 import matplotlib.pyplot as plt
 import scipy as sp
 import librosa
