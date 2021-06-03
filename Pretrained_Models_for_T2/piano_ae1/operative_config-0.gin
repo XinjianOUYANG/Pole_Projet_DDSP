@@ -46,7 +46,7 @@ get_model.model = @models.Autoencoder()
 
 # Parameters for Harmonic:
 # ==============================================================================
-Harmonic.amp_resample_method = 'window'
+# Harmonic.amp_resample_method = 'window'
 Harmonic.n_samples = 64000
 Harmonic.name = 'harmonic'
 Harmonic.normalize_below_nyquist = True
