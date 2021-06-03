@@ -2,7 +2,7 @@
 
 ## training samples
 
-This model is trained using all the paino audios(**from Piano_01.wav to Piano_15.wav**) in the folder [Piano/Audio](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/tree/main/Datasets/Piano/Audio)
+This model is trained using all the paino audios(**from Piano_1.wav to Piano_15.wav**) in the folder [Piano/Audio](https://github.com/XinjianOUYANG/Pole_Projet_DDSP/tree/main/Datasets/Piano/Audio)
 
 ## The details of the model
 
